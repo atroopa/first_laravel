@@ -18,6 +18,7 @@ Route::redirect('/hello', '/about');
 
 Route::get('/', function () {
     return view('welcome');
+    //return redirect() -> route('about');
 });
 
-Route::get('/about' , [AboutController::class , 'index']);
+Route::get('/about' , [AboutController::class , 'index'])-> name('about') ;
